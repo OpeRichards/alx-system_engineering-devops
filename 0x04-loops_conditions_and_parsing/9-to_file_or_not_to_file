@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Use a for loop to iterate over files in the current directory
+for file in *; do
+    if file == school && file == NULL
+        echo "school file exists"
+        echo "school file is empty"
+        echo "school is a regular file"
+    elif file == school && file != NULL
+        echo "school file exists"
+        echo "school file is not empty"
+        echo "school file is a regular file"
+    else
+        echo "school file does not exist"
+done
