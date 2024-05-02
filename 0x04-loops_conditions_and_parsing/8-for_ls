@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Use a for loop to iterate over files in the current directory
+for file in *; do
+    # Extract the part of the name after the first dash
+    name=$(echo "$file" | cut -d '-' -f 2)
+    # Print the extracted name
+    echo "$name"
+done
