@@ -3,8 +3,8 @@
 
 if [ $# -lt 4 ]
 then
-    echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-    exit 1
+        echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+        exit 1
 fi
 
 # Assign parameters to variables
@@ -21,7 +21,7 @@ scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_key" "$path_to_file" "$userna
 # Check if the transfer was successful
 if [ $? -eq 0 ]
 then
-    echo "FILE was TRANSFERED SUCCESSFULLY"
+        echo "FILE was TRANSFERED SUCCESSFULLY"
 else
-    echo "FILE TRANSFER FAILED"
+        echo "FILE TRANSFER FAILED"
 fi
