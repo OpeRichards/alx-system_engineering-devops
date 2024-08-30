@@ -5,7 +5,7 @@ Using one of the web stack debugging project issue or an outage personally exper
 
 
 **My first postmortem**
-
+![Houston, I Have A Problem Image](image.png)
 **Issue Summary**
 - Duration
     - Start Time: August 29th, 2024 15:00 WAT
@@ -24,7 +24,7 @@ The root cause of the issue was a database connection pool exhausion, caused by 
 
  - Detection Method:
     - Monitoring Alert: Automated alerts from the monitoring system indicted an increase in error rates and delegated service performance.
-
+![Resolving Error Image](image-2.png)
 - Actions Taken:
     - System Investigated: The team first investigated the load balancer logs and application server logs, assuming the issue might be related to an overload or failure in the application code.
     - Assumptions: Initial assumptions included potential issues with the application code or configuration settings.
@@ -44,6 +44,7 @@ The root cause of the issue was a database connection pool exhausion, caused by 
     - The root cause was an incorrect configuration of the database connection pool limits. The maximum number of connections allowed was too low for the increased load, resulting in the exhaustion of available connections and failure to process new requests.
 
 - Resolution:
+![Everything's Fine Image](image-1.png)
     - The issue was fixed by updating the database connection pool configuration to allow a higher number of simultaneous connections. Additionally, database query optimizations were implemented to reduce the load on the connection pool.
 
 **Corrective and Preventive Measures**
