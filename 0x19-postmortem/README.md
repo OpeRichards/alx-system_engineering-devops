@@ -4,7 +4,7 @@
 Using one of the web stack debugging project issue or an outage personally experienced, write a postmortem.
 
 
-**My first postmortem**
+**My first postmortem**<br>
 ![Houston, I Have A Problem Image](image.png)
 **Issue Summary**
 - Duration
@@ -43,8 +43,10 @@ The root cause of the issue was a database connection pool exhausion, caused by 
 - Root Cause:
     - The root cause was an incorrect configuration of the database connection pool limits. The maximum number of connections allowed was too low for the increased load, resulting in the exhaustion of available connections and failure to process new requests.
 
-- Resolution:
+
 ![Everything's Fine Image](image-1.png)
+
+- Resolution:    
     - The issue was fixed by updating the database connection pool configuration to allow a higher number of simultaneous connections. Additionally, database query optimizations were implemented to reduce the load on the connection pool.
 
 **Corrective and Preventive Measures**
